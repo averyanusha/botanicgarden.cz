@@ -1,0 +1,41 @@
+.footer {
+   background-color: $greenColor;
+   color: #fff;
+   padding: 80px 100px;
+   font-weight: 500;
+   &__container{
+   }
+   &__body{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+   }
+   &__title{
+      font-size: 2.3rem;
+      text-transform: uppercase;
+   }
+   &__column{
+      max-width: 40%;
+   }
+   &__bottom{
+      &-link {
+         margin-right: 10px;
+      }
+   }
+}
+
+.column {
+   display: flex;
+   flex-direction: column;
+   &__title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+   }
+   &__link {
+      font-weight: 400;
+      margin: 10px 0px;
+   }
+   &__link:hover {
+      text-decoration: underline;
+   }
+}

@@ -1,0 +1,167 @@
+.header {
+   background-color: $mainColor;
+   &__container {
+      padding: rem(30) rem(140) 1%;
+   }
+
+   &__body {
+
+   }
+
+   &__logo {
+
+   }
+
+   &__menu {
+      display: flex;
+      justify-content: space-between;
+      color: $whiteColor;
+      font-weight: 500;
+   }
+}
+
+.menu {
+   &__list {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      @include adaptiveValue("gap", 30, 10);
+   }
+   &__item {
+      @media (any-hover: hover) {
+			&:hover {
+            text-decoration: underline;
+			}
+		}
+   }
+   &__link {
+      cursor: pointer;
+   }
+   &__button {
+      padding: 10px 30px;
+      margin-top: -2%;
+      color: $mainColor;
+      background-color: $whiteColor;
+      border-radius: 15px;
+
+      @media (any-hover: hover) {
+			&:hover {
+            background-color: #fff;
+			}
+		}
+   }
+}
+
+
+.search {
+   // &__overlay {
+   //    height: 100%;
+   //    width: 100%;
+   //    display: none;
+   //    position: fixed;
+   //    z-index: 1;
+   //    top: 0;
+   //    left: 0;
+   //    background-color: rgba(0,0,0, 0.9);
+   //    transition: all 0.5s ease-in-out 0s;
+   // }
+   // &__overlay.open {
+   //    display: block;
+   // }
+   &__content {
+      position: relative;
+      top: 46%;
+      right: 25%;
+      text-align: center;
+   }
+   &__form {
+      position: absolute;
+      top: 9%;
+      right: 10%;
+      width: 30%;
+      background-color: #fff;
+      box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.3);
+      box-sizing: border-box;
+      border: none;
+      font-family: inherit;
+      opacity: 0;
+      display: none;
+      z-index: 3;
+      transition: all 0.5s ease-in-out 0s;
+   }
+   &__input {
+      width: 93%;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 1.2rem;
+   }
+   &__close {
+      position: absolute;
+      top: 3%;
+      right: 3%;
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+.search__form._open {
+   opacity: 1;
+   display: block;
+}
+
+._icon-search {
+   color: $whiteColor;
+}
+
+
+// Burger menu
+
+.menu__icon {
+   @media (max-width: $mobile) {
+      display: block;
+      height: 18px;
+      cursor: pointer;
+      z-index: 10;
+
+      span,
+      &::before,
+      &::after {
+         right: 0;
+         position: absolute;
+         height: 5%;
+         width: 100%;
+         max-width: 30px;
+         background-color: $whiteColor;
+         transition: all 0.3s ease 0s;
+         z-index: 5;
+      }
+
+      &::before,
+      &::after {
+         content: "";
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         top: 50%;
+         transition: scale(1), translate(0px, -50%);
+      }
+      .menu-open & {
+         span {
+            transform: scale(0);
+         }
+         &::before {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+         }
+         &::after {
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+         }
+      }
+   }
+}

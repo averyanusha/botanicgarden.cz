@@ -1,0 +1,218 @@
+@import "libs/swiper";
+
+@import "fonts";
+
+@import "iconsfont";
+
+$fontFamily: "Quicksand";
+$fontSize: rem(18);
+
+$mainColor: #011105;
+$greenColor: #355039;
+$brownColor: #90643F;
+$whiteColor: #E5E5E5;
+
+$minWidth: 320;
+$maxWidth: 1920;
+
+$maxWidthContainer: 1590;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+
+$responsiveTupe: 1;
+
+
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+
+@import "base/null";
+
+@import "base/mixins";
+
+
+body {
+	font-family: Quicksand;
+	font-size: 18px;
+	background: url("../img/bacground.png") 100% no-repeat;
+}
+
+@import "header";
+
+@import "footer";
+
+.hero {
+	&__container {
+		position: relative
+	}
+
+	&__img {
+		width: 100vw;
+	}
+
+	&__title {
+		position: absolute;
+		top: 40%;
+		left: 35%;
+		color: $whiteColor;
+		text-align: center;
+		font-size: 4rem;
+		max-width: 600px;
+	}
+}
+
+.events {
+	padding: 140px 140px;
+	&__title {
+		font-size: 2.7rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-slide {
+	&__top {}
+	&__date{}
+}
+
+.item {
+	margin: 100px 30px 0px;
+
+	&__top {
+		width: 100%;
+		text-align: center;
+		border-radius: 10px;
+		border: #000 1px solid;
+		box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.3);
+		padding: 10px 20px;
+		margin-bottom: 100px;
+	}
+	&__date{
+
+	}
+	&__body {
+		max-width: 90%;
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		margin-bottom: 10px;
+		box-shadow: 10px 5px 30px rgba(0, 0, 0, 0.3);
+	}
+	&__text {
+		font-size: 0.8rem;
+		margin: 10px 0px;
+	}
+}
+
+.gardens {
+	padding: rem(100) rem(140);
+	&__title {
+		text-align: center;
+		font-size: 3rem;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-bottom: 80px;
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+		margin-bottom: rem(100px);
+	}
+	&__bottom {
+
+	}
+	&__link{
+
+	}
+	&__icon {
+	}
+}
+
+.garden__img {
+	max-width: 100%;
+	border-radius: 10px;
+	box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+	padding: rem(100) rem(0);
+	&__content {
+		width: 100%;
+		max-width: 20vw;
+		margin: 15% 10%;
+	}
+	&__title {
+		font-size: 2.5rem;
+		margin-bottom: 50px;
+	}
+}
+.science {
+	height: 100vh;
+	&__content {
+		text-align: right;
+		color: #fff;
+		padding: 20% 10% 10% 60%;
+	}
+	&__title {
+		font-size: 3.5rem;
+		text-transform: uppercase;
+	}
+	&__text{
+		margin: 40px 0px;
+		font-size: 1.3rem;
+	}
+	&__link{
+		font-size: 1rem;
+	}
+	&__icon::before {
+		color: #fff;
+	}
+}
+
+
+.parallax {
+	&__wrapper {
+		display: flex;
+      flex-direction: column;
+	}
+	&__window{
+	}
+}
+
+.cta {
+	padding: 100px 140px;
+	text-align: center;
+	&__top{
+		height: 1px;
+		background-color: $greenColor;
+	}
+	&__bottom {
+		margin: 100px 0px;
+	}
+	&__button {
+		background-color: $brownColor;
+		padding: 35px;
+		border-radius: 20px;
+		font-size: 1.7rem;
+		text-transform: uppercase;
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&__button:hover {
+		background-color: rgba(144, 100, 63, 0.8);
+	}
+	&__text {
+		max-width: 50%;
+		margin: 50px auto;
+	}
+}

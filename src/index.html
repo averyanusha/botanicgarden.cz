@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/head.html',{
+	"title":"Botanicka Zahrada"
+	})
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	<body>
+		@@include('html/header.html',{})
+		<main>
+			<div class="hero">
+				<div class="hero__container">
+					<img class="hero__img" src="img/hero-background.png" alt="garden">
+					<h1 class="hero__title">Welcome to 
+						Botanical garden, 
+						Prague
+					</h1>
+				</div>
+			</div>
+			<section class="events">
+				<h2 class="events__title">
+					What’s on this month
+				</h2>
+				@@include('html/events-slider.html',{})
+			</section>
+			<div class="gardens">
+				<h2 class="gardens__title">Our gardens</h2>
+				<div class="gardens__container container">
+					<div class="container__img">
+						<img class="garden__img" src="img/garden-maple.jpg" alt="garden-maple">
+					</div>
+					<div class="container__content">
+						<a href="" class="container__link">
+							<h3 class="container__title">Garden Maple</h3>
+							<p class="container__text">Phasellus accumsan imperdiet tempor. Cras tincidunt, arcu nec eleifend porttitor, orci est vehicula velit, scelerisque fringilla ligula mi in urna. Nulla ut odio eu mi congue molestie. </p>
+						</a>
+					</div>
+				</div>
+				<div class="gardens__container container">
+					<div class="container__content">
+						<a href="" class="container__link">
+							<h3 class="container__title">Outdoor garden</h3>
+							<p class="container__text">In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.</p>
+						</a>
+					</div>
+					<div class="container__img">
+						<img class="garden__img" src="img/outdoor-garden.jpg" alt="outdoor-garden">
+					</div>
+				</div>
+				<div class="gardens__bottom">
+					<a href="" class="gardens__link">Discover all our gardens
+						<span class="_icon-arrow-forward gardens__icon"></span>
+					</a>
+				</div>
+			</div>
+			<section class="science">
+				<div class="parallax__wrapper">
+					<div class="parallax__window" data-speed="0.4" data-parallax="scroll"
+					data-image-src="img/science.jpg">
+						<div class="science__content">
+							<h3 class="science__title">
+								Amusing science
+							</h3>
+							<p class="science__text">
+								our scientist made science interesting and easy for our clients of all ages, even for the smallest ones
+							</p>
+							<a href="#" class="science__link">
+								Learn more about plants
+								<span class="_icon-arrow-forward science__icon"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="cta">
+				<div class="cta__top"></div>
+				<div class="cta__bottom">
+					<button class="cta__button">
+						Purchase ticket
+					</button>
+					<div class="cta__text">
+						<p>Advance ticket reservations are required. All visitors—including Members, Patrons, and Corporate Members—need either mobile or printed timed-entry tickets for admission to the Garden.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
